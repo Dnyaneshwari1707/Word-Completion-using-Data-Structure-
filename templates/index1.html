@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AUTOCOMPLETE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='style1.css') }}>    
+</head>
+<body>
+    <header>
+    <div class="wrapper">
+        <div class="logo">
+            <img src={{ url_for('static', filename='image.png') }} alt="logo"  width="100" height="100">
+        </div>
+<ul class="nav-area">
+<li><h2>Ternary Search Tree</h2></li>
+</ul>
+</div>
+<div class="welcome-text">
+    <form method="post" >
+        <h2><span>Input:</span></h2> <input id = "text" name="text" rows="2" cols="50">
+        </input>
+          <br><br>
+        <input type="submit" value="Click Me">
+    </form>
+    
+    <form method="get">
+        <input type="submit" value="Clear">
+    </form>
+    
+    <form action=".">
+        <textarea name="Words" rows="8" cols="90">
+            {% for i in output %}
+            -{{i}}
+            {% endfor %}
+          </textarea>
+          <br><br>
+    </form>
+    
+    </div>
+</header>
+</body>
+</html>
